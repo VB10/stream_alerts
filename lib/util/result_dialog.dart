@@ -17,9 +17,10 @@ class ResultDialog {
     );
   }
 
-  Column _body() {
-    return Column(
-      children: [
+  AlertDialog _body() {
+    return AlertDialog(
+      title: Text('My Dialog'),
+      actions : <Widget>[
         _button(Results.ok.toString(), Results.ok),
         _button(Results.fail.toString(), Results.fail),
       ],
@@ -29,7 +30,7 @@ class ResultDialog {
   Widget _button(String title, Results value) {
     return TextButton(
         onPressed: () {
-          onComplete(Results.ok);
+          onComplete(value);
           Navigator.of(context).pop();
         },
         child: Text(title));

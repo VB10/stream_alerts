@@ -26,7 +26,7 @@ class _HomeDetailViewState extends State<HomeDetailView> {
             onPressed: () {
               ResultDialog((val) {
                 fetchService(val);
-              }, context);
+              }, context).show();
             },
           ),
         ],
